@@ -1,1 +1,54 @@
 json包中存放json模型相关的代码
+
+返回数据的大概格式：
+{
+    "HeWeather":{
+        "static":"ok",
+        "basic":{},
+        "aqi":{},
+        "now":{},
+        "suggestion":{},
+        "daily_forecast":[]
+    }
+}
+因为其中又有具体内容，将其定义为5个实体类
+
+"basic":{
+    "city":"苏州",
+    "id":"CN101190401",
+    "update":{ "loc":"2017-07-14 12:40 }
+}
+
+"aqi":{
+    "city":{
+        "aqi":"44",
+        "pm25":"13"
+    }
+}
+
+"now":{
+    "tmp":"32",
+    "cond":{  "txt":"阵雨" }
+}
+
+"suggestion":{
+    "comf":{  "txt":"白天天气较热" },
+    "cw":{ "txt": "不适宜洗车" }，
+    "sport":{ "txt": "有降水，建议户内运动" }
+}
+
+"daily_forecast"：[
+    {
+        "data":"2017-07-14",
+        "cond":{"txt_d"： “雨”}，
+        "tmp":{"max": "34",
+                "min":"26"}
+    },
+    {
+    "data":"2017-07-14",
+            "cond":{"txt_d"： “雨”}，
+            "tmp":{"max": "34",
+                    "min":"26"}
+    },
+    ....
+}
