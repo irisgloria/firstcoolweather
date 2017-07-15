@@ -23,8 +23,7 @@
             android:layout_marginLeft="10dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:text="返回"
-            android:textSize="20sp"/>
+            android:background="@drawable/ic_back"/>
     </RelativeLayout>
     <ListView
         android:id="@+id/list_view"
